@@ -1,0 +1,298 @@
+.custom-btn-container {
+  width: 60%;
+  margin: 40px auto;
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  background: #090821;
+  border-radius: 5px;
+}
+
+.custom-btn {
+  width: 90px;
+  height: 40px;
+  color: #fff;
+  margin: 20px;
+  z-index: 1;
+  position: relative;
+  padding: 0.5em 1em;
+  background-color: hsl(236, 32%, 26%);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+}
+.custom-btn:hover {
+  cursor: pointer;
+}
+
+/* bubble - from bottom left */
+.btn-1 {
+  overflow: hidden;
+}
+.btn-1::before {
+  position: absolute;
+  top: 100%;
+  right: 100%;
+  z-index: -1;
+  width: 1em;
+  height: 1em;
+  content: "";
+  background-color: #1890ff;
+  border-radius: 50%;
+  transition: transform 0.45s ease-in-out;
+  transform: translate3d(50%, -50%, 0) scale3d(0, 0, 0);
+  transform-origin: center;
+}
+
+.btn-1:hover::before {
+  transform: translate3d(50%, -50%, 0) scale3d(15, 15, 15);
+}
+
+/* bubble - from bottom right */
+.btn-2 {
+  overflow: hidden;
+}
+.btn-2::before {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  z-index: -1;
+  width: 1em;
+  height: 1em;
+  content: "";
+  background-color: #1890ff;
+  border-radius: 50%;
+  transition: transform 0.45s ease-in-out;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transform-origin: center;
+}
+
+.btn-2:hover::before {
+  transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+}
+
+/* bubble - from top left */
+.btn-3 {
+  overflow: hidden;
+}
+.btn-3::before {
+  position: absolute;
+  bottom: 100%;
+  right: 100%;
+  z-index: -1;
+  width: 1em;
+  height: 1em;
+  content: "";
+  background-color: #1890ff;
+  border-radius: 50%;
+  transition: transform 0.45s ease-in-out;
+  transform: translate3d(50%, 50%, 0) scale3d(0, 0, 0);
+  transform-origin: center;
+}
+
+.btn-3:hover::before {
+  transform: translate3d(50%, 50%, 0) scale3d(15, 15, 15);
+}
+
+/* bubble - from top right */
+.btn-4 {
+  overflow: hidden;
+}
+.btn-4::before {
+  position: absolute;
+  bottom: 100%;
+  left: 100%;
+  z-index: -1;
+  width: 1em;
+  height: 1em;
+  content: "";
+  background-color: #1890ff;
+  border-radius: 50%;
+  transition: transform 0.45s ease-in-out;
+  transform: translate3d(-50%, 50%, 0) scale3d(0, 0, 0);
+  transform-origin: center;
+}
+
+.btn-4:hover::before {
+  transform: translate3d(-50%, 50%, 0) scale3d(15, 15, 15);
+}
+
+/* bubble - from center */
+.btn-5 {
+  overflow: hidden;
+}
+.btn-5::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  width: 1em;
+  height: 1em;
+  content: "";
+  background-color: #1890ff;
+  border-radius: 50%;
+  transition: transform 0.45s ease-in-out;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transform-origin: center;
+}
+
+.btn-5:hover::before {
+  transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+}
+
+/* Jelly */
+.btn-6:hover {
+  cursor: pointer;
+  animation: jelly 0.5s;
+}
+
+@keyframes jelly {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+
+/* Pulse */
+.btn-7::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  border: 4px solid hsl(236, 32%, 26%);
+  border-radius: 5px;
+  transform: scale(1);
+  transform-origin: center;
+}
+
+.btn-7:hover::before {
+  opacity: 0;
+  transition: all 0.75s ease-in-out;
+  transform: scale(1.75);
+  transform-origin: center;
+}
+
+/* Shine */
+.btn-8 {
+  overflow: hidden;
+}
+.btn-8::after {
+  position: absolute;
+  top: -50%;
+  bottom: -50%;
+  z-index: -1;
+  width: 1.25em;
+  content: "";
+  background-color: hsla(0, 0%, 100%, 0.2);
+  transform: translate3d(-550%, 0, 0) rotate(35deg);
+}
+
+.btn-8:hover::after {
+  transition: transform 0.45s ease-in-out;
+  transform: translate3d(250%, 0, 0) rotate(35deg);
+}
+
+/* Slide - from top*/
+.btn-9::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  border-radius: 5px;
+  background-color: #1890ff;
+  transition: transform 0.25s ease-in-out;
+  transform: scaleY(0);
+  transform-origin: center bottom;
+}
+
+.btn-9:hover::before {
+  transform: scaleY(1);
+  transform-origin: center top;
+}
+
+/* Slide - from right*/
+.btn-10::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  border-radius: 5px;
+  background-color: #1890ff;
+  transition: transform 0.25s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: center left;
+}
+
+.btn-10:hover::before {
+  transform: scaleX(1);
+  transform-origin: center right;
+}
+
+/* Slide - from down*/
+.btn-11::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  border-radius: 5px;
+  background-color: #1890ff;
+  transition: transform 0.25s ease-in-out;
+  transform: scaleY(0);
+  transform-origin: center top;
+}
+
+.btn-11:hover::before {
+  transform: scaleY(1);
+  transform-origin: center bottom;
+}
+
+/* Slide - from left*/
+.btn-12::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  border-radius: 5px;
+  background-color: #1890ff;
+  transition: transform 0.25s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: center right;
+}
+
+.btn-12:hover::before {
+  transform: scaleX(1);
+  transform-origin: center left;
+}

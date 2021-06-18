@@ -1,0 +1,249 @@
+.custom-input-container {
+  width: 60%;
+  margin: 40px auto;
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  background: #090821;
+  border-radius: 5px;
+}
+
+input {
+  width: 6.5em;
+  padding: 0.35em 0.45em;
+  font-family: inherit;
+  font-size: inherit;
+  color: white;
+  border-radius: 5px;
+  background-color: hsl(236, 32%, 26%);
+  border: 1px solid transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+.custom-input {
+  position: relative;
+  margin: 20px;
+}
+
+/* outline - cycle */
+.input-1 span {
+  position: absolute;
+  background-color: #1890ff;
+  transition: transform 0.5s ease;
+}
+
+.input-1 .bottom,
+.input-1 .top {
+  right: 0;
+  left: 0;
+  height: 1px;
+  transform: scaleX(0);
+}
+
+.input-1 .left,
+.input-1 .right {
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  transform: scaleY(0);
+}
+
+.input-1 .top {
+  top: 0;
+  transform-origin: top left;
+}
+
+.input-1 input:focus ~ .top {
+  transform: scaleX(1);
+  transform-origin: top right;
+}
+
+.input-1 .right {
+  right: 0;
+  transform-origin: top right;
+}
+
+.input-1 input:focus ~ .right {
+  transform: scaleY(1);
+  transform-origin: bottom right;
+}
+
+.input-1 .bottom {
+  bottom: 0;
+  transform-origin: bottom right;
+}
+
+.input-1 > input:focus ~ .bottom {
+  transform: scaleY(1);
+  transform-origin: bottom left;
+}
+
+.input-1 .left {
+  left: 0;
+  transform-origin: bottom left;
+}
+
+.input-1 input:focus ~ .left {
+  transform: scaleY(1);
+  transform-origin: top left;
+}
+
+/* outline - diffusion */
+.input-2 span {
+  position: absolute;
+  background-color: #1890ff;
+  transition: transform 0.5s ease;
+}
+
+.input-2 .bottom,
+.input-2 .top {
+  right: 0;
+  left: 0;
+  height: 1px;
+  transform: scaleX(0);
+}
+
+.input-2 .left,
+.input-2 .right {
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  transform: scaleY(0);
+}
+
+.input-2 .top {
+  top: 0;
+}
+
+.input-2 .bottom {
+  bottom: 0;
+}
+
+.input-2 .left {
+  left: 0;
+}
+
+.input-2 .right {
+  right: 0;
+}
+
+.input-2 input:focus ~ .top,
+.input-2 input:focus ~ .bottom {
+  transform: scaleX(1);
+}
+.input-2 input:focus ~ .left,
+.input-2 input:focus ~ .right {
+  transform: scaleY(1);
+}
+
+/* trace */
+.input-3 span {
+  position: absolute;
+  background-color: #1890ff;
+  transition: transform 0.1s ease;
+}
+
+.input-3 .bottom,
+.input-3 .top {
+  right: 0;
+  left: 0;
+  height: 1px;
+  transform: scaleX(0);
+}
+
+.input-3 .left,
+.input-3 .right {
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  transform: scaleY(0);
+}
+
+.input-3 .top {
+  top: 0;
+  transition-delay: 0.15s;
+  transform-origin: top left;
+}
+
+.input-3 input:focus ~ .top {
+  transform: scaleX(1);
+  transform-origin: top right;
+}
+
+.input-3 .right {
+  right: 0;
+  transition-delay: 0.05s;
+  transform-origin: top right;
+}
+
+.input-3 input:focus ~ .right {
+  transform: scaleY(1);
+  transform-origin: bottom right;
+}
+
+.input-3 .bottom {
+  bottom: 0;
+  transform-origin: bottom right;
+}
+
+.input-3 > input:focus ~ .bottom {
+  transform: scaleY(1);
+  transform-origin: bottom left;
+}
+
+.input-3 .left {
+  left: 0;
+  transition-delay: 0.25s;
+  transform-origin: bottom left;
+}
+
+.input-3 input:focus ~ .left {
+  transform: scaleY(1);
+  transform-origin: top left;
+}
+
+/* underline */
+.input-4 span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background-color: #1890ff;
+  transition: transform 0.5s ease;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.input-4 input:focus ~ span {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* underline2 */
+.input-5 span {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: #1890ff;
+  opacity: 0;
+  transition: all 0.3s ease;
+  transform: translate(-50%, 0) scaleX(0);
+  transform-origin: center;
+}
+
+.input-5 input:focus ~ span {
+  opacity: 1;
+  transform: translate(-50%, 0) scaleX(1);
+}

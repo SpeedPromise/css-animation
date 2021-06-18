@@ -1,0 +1,45 @@
+@import url(./css/button.css);
+@import url(./css/input.css);
+@import url(./css/text.css);
+@import url(./css/toggle.css);
+
+body {
+  background: #e0e5ec;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+  color: #676767;
+}
+
+.title {
+  position: relative;
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
+  color: #353535;
+  font-size: 50px;
+}
+
+.sub-title {
+  position: relative;
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
+  color: #353535;
+  font-size: 40px;
+}
+
+.line {
+  width: 60%;
+  height: 1px;
+  margin: 0 auto;
+  text-align: center;
+  translate: 40% 0;
+  border-top: solid #ACC0D8 1px
+}
+
+.clear {
+  clear: both;
+}
